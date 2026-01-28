@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="MADESA - Servicios profesionales de maquinados y soldadura. Torno industrial, soldadura especializada, mecánica hidráulica y servicio portátil en campo. Cuauhtémoc, Chihuahua.">
+    <meta name="keywords" content="maquinados, soldadura, torno, mecánica hidráulica, torno portátil, MADESA, Chihuahua">
+    <meta name="author" content="MADESA">
+    <meta name="theme-color" content="#ff6b35">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MADESA - Maquinados y Soldadura">
+    <meta property="og:description" content="Servicios profesionales de torno, soldadura, mecánica hidráulica y torno portátil en campo.">
+    <meta property="og:image" content="logo-madesa.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="MADESA - Maquinados y Soldadura">
+    <meta property="twitter:description" content="Servicios profesionales de torno, soldadura, mecánica hidráulica y torno portátil en campo.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo-madesa.png">
+    
+    <title>MADESA - Maquinados y Soldadura | Servicios Profesionales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Selector de Propuestas Flotante -->
+    <div class="proposal-selector">
+        <div class="selector-title">Seleccionar Propuesta</div>
+        <button class="proposal-btn active" data-proposal="1">
+            <span class="dot" style="background: #ff6b35;"></span>
+            Industrial Moderno
+        </button>
+        <button class="proposal-btn" data-proposal="2">
+            <span class="dot" style="background: #3498db;"></span>
+            Limpio y Profesional
+        </button>
+        <div class="selector-hint">💡 Haz clic para cambiar entre propuestas</div>
+    </div>
+
+    <!-- PROPUESTA 1: Industrial Moderno -->
+    <div id="proposal-1" class="proposal active">
+        <!-- Header -->
+        <header class="header-p1">
+            <div class="container-header">
+                <img src="logo-madesa.png" alt="MADESA" class="logo" onclick="showPage(1, 'home')">
+                <button class="menu-toggle" onclick="toggleMenu(1)">☰</button>
+                <nav class="nav-p1" id="nav-p1">
+                    <a href="#" onclick="showPage(1, 'services')" data-page="services">SERVICIOS</a>
+                    <a href="#" onclick="showPage(1, 'catalog')" data-page="catalog">CATÁLOGO</a>
+                    <a href="#" onclick="showPage(1, 'about')" data-page="about">NOSOTROS</a>
+                    <a href="#" onclick="showPage(1, 'billing')" class="btn-billing" data-page="billing">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        FACTURACIÓN
+                    </a>
+                    <div class="cart-icon" id="cart-p1" style="display: none;">
+                        🛒
+                        <span class="cart-badge">0</span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Home Page -->
+        <div class="page-content" data-page="home">
+            <!-- Hero Section -->
+            <section class="hero-p1">
+                <div class="container">
+                    <h1 class="hero-title">
+                        MAQUINADOS Y<br>
+                        <span class="highlight">SOLDADURA</span>
+                    </h1>
+                    <p class="hero-text">
+                        Servicio profesional de torno, soldadura, mecánica hidráulica y torno portátil en campo.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="showPage(1, 'catalog')">VER CATÁLOGO</button>
+                        <button class="btn-secondary">CONTACTAR</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Grid -->
+            <section class="services-grid-p1">
+                <div class="container">
+                    <h2 class="section-title">NUESTROS SERVICIOS</h2>
+                    <div class="grid-4">
+                        <div class="service-card-p1" onclick="showPage(1, 'services')">
+                            <div class="service-icon">⚙️</div>
+                            <h3>TORNO</h3>
+                            <p>Servicio profesional de torno industrial y de precisión</p>
+                        </div>
+                        <div class="service-card-p1" onclick="showPage(1, 'services')">
+                            <div class="service-icon">🔥</div>
+                            <h3>SOLDADURA</h3>
+                            <p>Soldadura especializada en todo tipo de metales</p>
+                        </div>
+                        <div class="service-card-p1" onclick="showPage(1, 'services')">
+                            <div class="service-icon">🔧</div>
+                            <h3>MECÁNICA HIDRÁULICA</h3>
+                            <p>Reparación y mantenimiento de sistemas hidráulicos</p>
+                        </div>
+                        <div class="service-card-p1" onclick="showPage(1, 'services')">
+                            <div class="service-icon">⚙️</div>
+                            <h3>TORNO PORTÁTIL</h3>
+                            <p>Servicio de torno portátil directamente en campo</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats -->
+            <section class="stats-p1">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Proyectos Completados</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Clientes Satisfechos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Calidad Garantizada</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Catalog Page -->
+        <div class="page-content" data-page="catalog" style="display: none;">
+            <div class="container" style="padding: 2rem 0;">
+                <h1 class="page-title">CATÁLOGO DE SERVICIOS</h1>
+                
+                <div class="catalog-controls">
+                    <div class="search-box">
+                        <input type="text" id="search-p1" placeholder="Buscar servicios..." class="search-input">
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-category="all">Todos</button>
+                        <button class="filter-btn" data-category="torno">Torno</button>
+                        <button class="filter-btn" data-category="soldadura">Soldadura</button>
+                        <button class="filter-btn" data-category="hidraulica">Hidráulica</button>
+                        <button class="filter-btn" data-category="campo">Campo</button>
+                    </div>
+                </div>
+
+                <div class="products-grid" id="products-p1">
+                    <!-- Los productos se cargarán con JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Detail Page -->
+        <div class="page-content" data-page="services" style="display: none;">
+            <div class="container" style="padding: 2rem 0;">
+                <h1 class="page-title">NUESTROS SERVICIOS</h1>
+                
+                <div class="service-detail-card">
+                    <div class="service-detail-grid">
+                        <div>
+                            <div class="service-detail-icon">⚙️</div>
+                            <h2 class="service-detail-title">SERVICIO DE TORNO</h2>
+                            <div class="service-gallery">
+                                <div class="gallery-item">🔧</div>
+                                <div class="gallery-item">⚙️</div>
+                                <div class="gallery-item">🔩</div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="service-description">
+                                Mecanizado de precisión para componentes industriales con equipos de última generación.
+                            </p>
+                            <h3 class="features-title">Características:</h3>
+                            <ul class="features-list">
+                                <li>✓ Torno convencional y CNC</li>
+                                <li>✓ Capacidad hasta Ø800mm</li>
+                                <li>✓ Tolerancias de ±0.01mm</li>
+                                <li>✓ Materiales diversos (acero, aluminio, bronce, etc.)</li>
+                                <li>✓ Acabados de alta calidad</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-detail-card">
+                    <div class="service-detail-grid">
+                        <div>
+                            <div class="service-detail-icon">🔥</div>
+                            <h2 class="service-detail-title">SOLDADURA</h2>
+                            <div class="service-gallery">
+                                <div class="gallery-item">🔥</div>
+                                <div class="gallery-item">⚡</div>
+                                <div class="gallery-item">🛡️</div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="service-description">
+                                Servicios de soldadura profesional con certificaciones en diferentes procesos.
+                            </p>
+                            <h3 class="features-title">Características:</h3>
+                            <ul class="features-list">
+                                <li>✓ Soldadura MIG/MAG</li>
+                                <li>✓ Soldadura TIG para aluminio y acero inoxidable</li>
+                                <li>✓ Electrodo revestido E6011</li>
+                                <li>✓ Estructuras metálicas</li>
+                                <li>✓ Soldadura de precisión</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-detail-card">
+                    <div class="service-detail-grid">
+                        <div>
+                            <div class="service-detail-icon">🔧</div>
+                            <h2 class="service-detail-title">MECÁNICA HIDRÁULICA</h2>
+                            <div class="service-gallery">
+                                <div class="gallery-item">🔩</div>
+                                <div class="gallery-item">⚡</div>
+                                <div class="gallery-item">🛠️</div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="service-description">
+                                Diagnóstico, reparación y mantenimiento de sistemas hidráulicos industriales.
+                            </p>
+                            <h3 class="features-title">Características:</h3>
+                            <ul class="features-list">
+                                <li>✓ Diagnóstico completo de sistemas</li>
+                                <li>✓ Reparación de bombas y motores hidráulicos</li>
+                                <li>✓ Cambio de sellos y componentes</li>
+                                <li>✓ Mantenimiento preventivo</li>
+                                <li>✓ Pruebas de presión y flujo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-detail-card">
+                    <div class="service-detail-grid">
+                        <div>
+                            <div class="service-detail-icon">🚚</div>
+                            <h2 class="service-detail-title">TORNO PORTÁTIL EN CAMPO</h2>
+                            <div class="service-gallery">
+                                <div class="gallery-item">🚚</div>
+                                <div class="gallery-item">📍</div>
+                                <div class="gallery-item">⏱️</div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="service-description">
+                                Servicio de mecanizado móvil directamente en su ubicación.
+                            </p>
+                            <h3 class="features-title">Características:</h3>
+                            <ul class="features-list">
+                                <li>✓ Servicio en sitio sin necesidad de traslados</li>
+                                <li>✓ Respuesta en menos de 24 horas</li>
+                                <li>✓ Radio de cobertura de 500km</li>
+                                <li>✓ Equipo portátil profesional</li>
+                                <li>✓ Atención de emergencias</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div class="page-content" data-page="about" style="display: none;">
+            <div class="container" style="padding: 2rem 0;">
+                <h1 class="page-title">SOBRE NOSOTROS</h1>
+                
+                <div class="about-card">
+                    <h2 class="about-subtitle">Nuestra Historia</h2>
+                    <p class="about-text">
+                        MADESA inició operaciones en 2023 con el objetivo de ofrecer servicios especializados de maquinados y soldadura 
+                        de la más alta calidad. Desde nuestros inicios, nos hemos comprometido con la excelencia y la satisfacción total 
+                        de nuestros clientes.
+                    </p>
+                    <p class="about-text">
+                        Con un equipo de profesionales altamente capacitados y equipo de última generación, atendemos las necesidades 
+                        de la industria local y regional, ofreciendo soluciones integrales en torno, soldadura, mecánica hidráulica 
+                        y servicio móvil en campo.
+                    </p>
+                </div>
+
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🏆</div>
+                        <h3>Misión</h3>
+                        <p>Proveer servicios de maquinados y soldadura de la más alta calidad, superando las expectativas de nuestros clientes.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">⭐</div>
+                        <h3>Visión</h3>
+                        <p>Ser reconocidos como la empresa líder en servicios de maquinados y soldadura en la región.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">✓</div>
+                        <h3>Valores</h3>
+                        <p>Calidad, honestidad, compromiso, innovación y responsabilidad son los pilares que guían nuestras acciones.</p>
+                    </div>
+                </div>
+
+                <div class="why-choose">
+                    <h2 class="about-subtitle" style="text-align: center;">¿Por qué elegirnos?</h2>
+                    <div class="reasons-grid">
+                        <div class="reason-item">
+                            <div class="reason-icon">⚡</div>
+                            <div>Rapidez en entregas</div>
+                        </div>
+                        <div class="reason-item">
+                            <div class="reason-icon">🎯</div>
+                            <div>Alta precisión</div>
+                        </div>
+                        <div class="reason-item">
+                            <div class="reason-icon">💯</div>
+                            <div>Calidad garantizada</div>
+                        </div>
+                        <div class="reason-item">
+                            <div class="reason-icon">🔧</div>
+                            <div>Equipo profesional</div>
+                        </div>
+                        <div class="reason-item">
+                            <div class="reason-icon">📞</div>
+                            <div>Atención personalizada</div>
+                        </div>
+                        <div class="reason-item">
+                            <div class="reason-icon">🚚</div>
+                            <div>Servicio a domicilio</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Billing Page -->
+        <div class="page-content" data-page="billing" style="display: none;">
+            <div class="container" style="padding: 2rem 0;">
+                <h1 class="page-title">SISTEMA DE FACTURACIÓN</h1>
+                
+                <div class="billing-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">💵</div>
+                        <div class="stat-value">$16,700</div>
+                        <div class="stat-text">Total Facturado</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📄</div>
+                        <div class="stat-value" id="total-invoices">3</div>
+                        <div class="stat-text">Facturas Generadas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⏰</div>
+                        <div class="stat-value">1</div>
+                        <div class="stat-text">Facturas Pendientes</div>
+                    </div>
+                </div>
+
+                <div class="invoice-form">
+                    <h2 class="form-title">CREAR NUEVA FACTURA</h2>
+                    <div class="form-grid">
+                        <input type="text" id="client-name" placeholder="Nombre del cliente" class="form-input">
+                        <input type="number" id="amount" placeholder="Monto" class="form-input">
+                        <input type="text" id="description" placeholder="Descripción" class="form-input">
+                    </div>
+                    <button class="btn-create-invoice" onclick="createInvoice(1)">+ CREAR FACTURA</button>
+                </div>
+
+                <div class="invoice-table-container">
+                    <table class="invoice-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>FECHA</th>
+                                <th>CLIENTE</th>
+                                <th style="text-align: right;">MONTO</th>
+                                <th style="text-align: center;">ESTADO</th>
+                                <th style="text-align: center;">ACCIONES</th>
+                            </tr>
+                        </thead>
+                        <tbody id="invoices-tbody">
+                            <tr>
+                                <td>INV-001</td>
+                                <td>2026-01-15</td>
+                                <td>Empresa ABC</td>
+                                <td style="text-align: right; font-weight: 700;">$5,000</td>
+                                <td style="text-align: center;"><span class="badge-paid">PAGADA</span></td>
+                                <td style="text-align: center;"><button class="btn-download">📥 PDF</button></td>
+                            </tr>
+                            <tr>
+                                <td>INV-002</td>
+                                <td>2026-01-20</td>
+                                <td>Industrias XYZ</td>
+                                <td style="text-align: right; font-weight: 700;">$8,500</td>
+                                <td style="text-align: center;"><span class="badge-pending">PENDIENTE</span></td>
+                                <td style="text-align: center;"><button class="btn-download">📥 PDF</button></td>
+                            </tr>
+                            <tr>
+                                <td>INV-003</td>
+                                <td>2026-01-25</td>
+                                <td>Taller Mecánico</td>
+                                <td style="text-align: right; font-weight: 700;">$3,200</td>
+                                <td style="text-align: center;"><span class="badge-paid">PAGADA</span></td>
+                                <td style="text-align: center;"><button class="btn-download">📥 PDF</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer-p1">
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <img src="logo-madesa.png" alt="MADESA" class="footer-logo">
+                        <p class="footer-text">Maquinados y soldadura profesional desde 2023</p>
+                    </div>
+                    <div>
+                        <h4 class="footer-title">CONTACTO</h4>
+                        <p class="footer-text">📞 (123) 456-7890</p>
+                        <p class="footer-text">✉️ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="deb7b0b8b19eb3bfbabbadbff0bdb1b3">[email&#160;protected]</a></p>
+                    </div>
+                    <div>
+                        <h4 class="footer-title">HORARIO</h4>
+                        <p class="footer-text">Lun - Vie: 8:00 AM - 6:00 PM</p>
+                        <p class="footer-text">Sábado: 9:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- PROPUESTA 2: Limpio y Profesional -->
+    <div id="proposal-2" class="proposal" style="display: none;">
+        <!-- Similar structure but with Proposal 2 styling -->
+        <!-- Header -->
+        <header class="header-p2">
+            <div class="container-header">
+                <img src="logo-madesa.png" alt="MADESA" class="logo" onclick="showPage(2, 'home')">
+                <button class="menu-toggle" onclick="toggleMenu(2)">☰</button>
+                <nav class="nav-p2" id="nav-p2">
+                    <a href="#" onclick="showPage(2, 'services')" data-page="services">Servicios</a>
+                    <a href="#" onclick="showPage(2, 'catalog')" data-page="catalog">Catálogo</a>
+                    <a href="#" onclick="showPage(2, 'about')" data-page="about">Nosotros</a>
+                    <a href="#" onclick="showPage(2, 'home')" data-page="contact">Contacto</a>
+                    <a href="#" onclick="showPage(2, 'billing')" class="btn-billing-p2" data-page="billing">
+                        Portal de Facturación
+                    </a>
+                    <div class="cart-icon-p2" id="cart-p2" style="display: none;">
+                        🛒
+                        <span class="cart-badge">0</span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Home Page -->
+        <div class="page-content" data-page="home">
+            <section class="hero-p2">
+                <div class="container-p2">
+                    <div class="hero-grid">
+                        <div>
+                            <div class="badge-p2">⭐ Servicio Profesional desde 2023</div>
+                            <h1 class="hero-title-p2">Soluciones en Maquinados y Soldadura</h1>
+                            <p class="hero-text-p2">
+                                Ofrecemos servicios especializados de torno, soldadura, mecánica hidráulica y torno portátil en campo. Calidad garantizada en cada proyecto.
+                            </p>
+                            <div class="hero-buttons-p2">
+                                <button class="btn-primary-p2" onclick="showPage(2, 'catalog')">Ver Catálogo →</button>
+                                <button class="btn-secondary-p2">📞 Contactar</button>
+                            </div>
+                        </div>
+                        <div class="service-cards-grid">
+                            <div class="mini-card" onclick="showPage(2, 'services')">
+                                <div class="mini-icon" style="color: #3498db;">⚙️</div>
+                                <h4>Torno Industrial</h4>
+                            </div>
+                            <div class="mini-card" onclick="showPage(2, 'services')">
+                                <div class="mini-icon" style="color: #ff6b35;">🔥</div>
+                                <h4>Soldadura</h4>
+                            </div>
+                            <div class="mini-card" onclick="showPage(2, 'services')">
+                                <div class="mini-icon" style="color: #9b59b6;">🔧</div>
+                                <h4>Mecánica Hidráulica</h4>
+                            </div>
+                            <div class="mini-card" onclick="showPage(2, 'services')">
+                                <div class="mini-icon" style="color: #27ae60;">🏆</div>
+                                <h4>Servicio en Campo</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="services-section-p2">
+                <div class="container-p2">
+                    <div class="section-header">
+                        <h2 class="section-title-p2">Nuestros Servicios</h2>
+                        <p class="section-subtitle-p2">Calidad, precisión y experiencia en cada proyecto que realizamos</p>
+                    </div>
+                    <div class="services-grid-p2">
+                        <div class="service-card-p2" onclick="showPage(2, 'services')">
+                            <div class="service-icon-box">⚙️</div>
+                            <h3>Servicio de Torno</h3>
+                            <p>Trabajos de precisión en torno industrial para piezas de todos los tamaños</p>
+                            <ul class="service-features">
+                                <li>✓ Alta precisión</li>
+                                <li>✓ Diferentes materiales</li>
+                                <li>✓ Entregas rápidas</li>
+                            </ul>
+                        </div>
+                        <div class="service-card-p2" onclick="showPage(2, 'services')">
+                            <div class="service-icon-box">🔥</div>
+                            <h3>Soldadura General</h3>
+                            <p>Soldadura especializada para todo tipo de metales y aplicaciones</p>
+                            <ul class="service-features">
+                                <li>✓ MIG/TIG/Electrodo</li>
+                                <li>✓ Estructuras metálicas</li>
+                                <li>✓ Certificada</li>
+                            </ul>
+                        </div>
+                        <div class="service-card-p2" onclick="showPage(2, 'services')">
+                            <div class="service-icon-box">🔧</div>
+                            <h3>Mecánica Hidráulica</h3>
+                            <p>Reparación y mantenimiento de sistemas hidráulicos industriales</p>
+                            <ul class="service-features">
+                                <li>✓ Diagnóstico completo</li>
+                                <li>✓ Reparaciones</li>
+                                <li>✓ Mantenimiento</li>
+                            </ul>
+                        </div>
+                        <div class="service-card-p2" onclick="showPage(2, 'services')">
+                            <div class="service-icon-box">🏆</div>
+                            <h3>Torno Portátil en Campo</h3>
+                            <p>Servicio de torno directamente en su ubicación, sin necesidad de traslados</p>
+                            <ul class="service-features">
+                                <li>✓ Servicio móvil</li>
+                                <li>✓ Sin traslados</li>
+                                <li>✓ Disponibilidad inmediata</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <div class="container-p2">
+                    <h2 class="cta-title">¿Necesitas un servicio especializado?</h2>
+                    <p class="cta-text">Contáctanos hoy y recibe una cotización personalizada para tu proyecto</p>
+                    <button class="btn-cta">Solicitar Cotización</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Las demás páginas (catalog, services, about, billing) con estructura similar a Propuesta 1 -->
+        <!-- pero con clases de estilo de Propuesta 2 -->
+
+        <!-- Footer -->
+        <footer class="footer-p2">
+            <div class="container-p2">
+                <div class="footer-grid-p2">
+                    <div>
+                        <img src="logo-madesa.png" alt="MADESA" class="footer-logo-p2">
+                        <p class="footer-text-p2">Soluciones profesionales en maquinados y soldadura desde 2023</p>
+                    </div>
+                    <div>
+                        <h4 class="footer-title-p2">Servicios</h4>
+                        <p class="footer-link">Torno Industrial</p>
+                        <p class="footer-link">Soldadura</p>
+                        <p class="footer-link">Mecánica Hidráulica</p>
+                        <p class="footer-link">Servicio en Campo</p>
+                    </div>
+                    <div>
+                        <h4 class="footer-title-p2">Contacto</h4>
+                        <p class="footer-text-p2">📞 (123) 456-7890</p>
+                        <p class="footer-text-p2">✉️ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="187b77766c797b6c775875797c7d6b79367b7775">[email&#160;protected]</a></p>
+                        <p class="footer-text-p2">📍 Cuauhtémoc, Chihuahua</p>
+                    </div>
+                </div>
+         
